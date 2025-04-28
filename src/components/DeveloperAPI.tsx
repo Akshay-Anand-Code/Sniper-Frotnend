@@ -1,12 +1,12 @@
 import React from 'react';
 import SectionPanel from './SectionPanel';
 
-const code = `import { SniperClient } from '@sniper/sdk';
+const code = `import { EROSClient } from '@EROS/sdk';
 
-// Initialize Sniper Client
-const client = new SniperClient({
+// Initialize EROS Client
+const client = new EROSClient({
   env: 'mainnet',
-  apikey: process.env.SNIPER_API_KEY
+  apikey: process.env.EROS_API_KEY
 });
 
 // Get market data
@@ -40,7 +40,7 @@ const DeveloperAPI: React.FC = () => (
         <div>
           <h2 className="text-3xl font-audiowide font-bold text-heading mb-4">Developer API</h2>
           <p className="text-text mb-8">
-            Integrate SNIPER's powerful trading infrastructure into your applications with our comprehensive API and SDK. Our developer tools provide everything needed to build sophisticated trading applications, from market data feeds to order execution endpoints. With extensive documentation, robust error handling, and dedicated support, we make it easy to leverage SNIPER's capabilities in your projects.
+            Integrate EROS's powerful trading infrastructure into your applications with our comprehensive API and SDK. Our developer tools provide everything needed to build sophisticated trading applications, from market data feeds to order execution endpoints. With extensive documentation, robust error handling, and dedicated support, we make it easy to leverage EROS's capabilities in your projects.
           </p>
         </div>
         <div className="flex gap-4 mt-4">

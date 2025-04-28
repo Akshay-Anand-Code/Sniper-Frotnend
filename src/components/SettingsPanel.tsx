@@ -10,8 +10,8 @@ const SettingsPanel: React.FC = () => {
           <input type="text" className="w-full px-4 py-2 rounded-lg bg-background border border-accent2 text-heading focus:outline-none focus:ring-2 focus:ring-accent2" placeholder="Enter your Helius API key" />
         </div>
         <div>
-          <label className="block text-text mb-2 font-medium">Sniperoo API Key</label>
-          <input type="text" className="w-full px-4 py-2 rounded-lg bg-background border border-accent3 text-heading focus:outline-none focus:ring-2 focus:ring-accent3" placeholder="Enter your Sniperoo API key" />
+          <label className="block text-text mb-2 font-medium">EROSoo API Key</label>
+          <input type="text" className="w-full px-4 py-2 rounded-lg bg-background border border-accent3 text-heading focus:outline-none focus:ring-2 focus:ring-accent3" placeholder="Enter your EROSoo API key" />
         </div>
         <div>
           <label className="block text-text mb-2 font-medium">Solana Wallet Address</label>

@@ -16,9 +16,9 @@ const features = [
 
 const WhyChooseUs: React.FC = () => (
   <section className="w-full py-16">
-    <h2 className="text-3xl font-audiowide font-bold text-heading text-center mb-4">Why Choose SNIPER?</h2>
+    <h2 className="text-3xl font-audiowide font-bold text-heading text-center mb-4">Why Choose EROS?</h2>
     <p className="text-text text-center max-w-2xl mx-auto mb-10">
-      Built by traders for traders, SNIPER represents the next evolution in decentralized trading. Our platform combines professional-grade tools with unmatched performance on Solana, delivering an experience that rivals traditional centralized exchanges while maintaining the benefits of decentralization.
+      Built by traders for traders, EROS represents the next evolution in decentralized trading. Our platform combines professional-grade tools with unmatched performance on Solana, delivering an experience that rivals traditional centralized exchanges while maintaining the benefits of decentralization.
     </p>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
       {stats.map((s, i) => (

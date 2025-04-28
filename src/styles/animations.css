@@ -1,0 +1,25 @@
+@keyframes dot-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(28px);
+  }
+}
+
+@keyframes dot-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(28px);
+  }
+}
+
+.animate-dot-horizontal {
+  animation: dot-horizontal linear infinite;
+}
+
+.animate-dot-vertical {
+  animation: dot-vertical linear infinite;
+} 

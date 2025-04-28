@@ -15,10 +15,10 @@ const LiveLogs: React.FC = () => {
       <h2 className="text-2xl font-audiowide font-bold text-heading mb-6">Live Logs</h2>
       <div className="h-48 overflow-y-auto bg-background rounded-lg border border-border p-3 font-mono text-sm text-text">
         {/* Replace with real-time logs */}
-        <div>[12:00:01] 🚀 Starting Solana Token Sniper...</div>
+        <div>[12:00:01] 🚀 Starting EROS...</div>
         <div>[12:00:02] ✅ Subscription confirmed</div>
         <div>[12:00:05] 💦 New Liquidity Pool signature found</div>
-        <div>[12:00:06] 🔫 Sniping token using Sniperoo...</div>
+        <div>[12:00:06] 🔫 Sniping token using EROSoo...</div>
         <div>[12:00:07] ✅ Token swapped successfully</div>
       </div>
     </motion.section>

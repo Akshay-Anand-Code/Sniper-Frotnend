@@ -3,7 +3,28 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <section className="w-full py-20 flex flex-col items-center justify-center text-center">
-      <h1 className="text-5xl md:text-6xl font-audiowide font-bold text-heading mb-4">Solana Token Sniper</h1>
+      <div className="relative flex justify-center items-center mb-4">
+        {/* Glow */}
+        <div
+          className="absolute inset-0 flex justify-center items-center"
+          aria-hidden="true"
+        >
+          <div
+            className="rounded-full blur-2xl"
+            style={{
+              width: '320px',
+              height: '90px',
+              background: 'radial-gradient(ellipse at center, #fff 0%, #00ffe7 60%, transparent 100%)',
+              opacity: 0.18,
+              zIndex: 0,
+            }}
+          />
+        </div>
+        {/* Heading */}
+        <h1 className="relative z-10 text-5xl md:text-6xl font-audiowide font-bold text-heading">
+          EROS
+        </h1>
+      </div>
       <p className="text-lg md:text-xl text-text mb-10 max-w-2xl mx-auto">
         The ultimate toolkit for lightning-fast, secure token sniping on Solana. Experience professional-grade automation and analytics.
       </p>

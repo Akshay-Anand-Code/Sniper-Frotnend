@@ -8,7 +8,7 @@ const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
   return (
     <nav className="w-full flex items-center justify-between py-4 px-8 bg-card border-b border-border shadow-card rounded-b-xl">
       <div className="flex items-center space-x-3">
-        <span className="text-2xl font-audiowide font-bold text-heading tracking-widest">SNIPER</span>
+        <span className="text-2xl font-audiowide font-bold text-heading tracking-widest">EROS</span>
         <span className="text-accent2 font-audiowide font-bold text-lg">BOT</span>
       </div>
       <div className="hidden md:flex space-x-8 text-text text-base font-medium">

@@ -11,6 +11,7 @@ import StatusCards from './components/StatusCards';
 import Footer from './components/Footer';
 import { motion } from 'framer-motion';
 import Whitepaper from './components/Whitepaper';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const sectionSpring = {
   initial: { opacity: 0, y: 40 },
@@ -42,15 +43,13 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-      {/* Subtle SVG dot grid background */}
-      <svg className="fixed inset-0 w-full h-full pointer-events-none z-0" style={{opacity:0.13}} width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="dotgrid" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
-            <circle cx="1.5" cy="1.5" r="1.5" fill="#b0b8c1" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#dotgrid)" />
-      </svg>
+      <AnimatedBackground 
+        direction="horizontal"
+        color="#b0b8c1"
+        opacity={0.13}
+        dotSize={1.5}
+        speed={20}
+      />
       <div className="relative z-10">
         <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
         <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
