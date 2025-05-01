@@ -1,20 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 interface NavbarProps {
   onWhitepaperClick?: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
+  const [toolsOpen, setToolsOpen] = useState(false);
+
+  // Handle hover for dropdown with delay on mouse leave
+  let closeTimeout: NodeJS.Timeout;
+  const handleMouseEnter = () => {
+    clearTimeout(closeTimeout);
+    setToolsOpen(true);
+  };
+  const handleMouseLeave = () => {
+    closeTimeout = setTimeout(() => setToolsOpen(false), 150);
+  };
+
   return (
-    <nav className="w-full flex items-center justify-between py-4 px-8 bg-card border-b border-border shadow-card rounded-b-xl">
-      <div className="flex items-center space-x-3">
-        <span className="text-2xl font-audiowide font-bold text-heading tracking-widest">EROS</span>
-        <span className="text-accent2 font-audiowide font-bold text-lg">BOT</span>
+    <nav className="w-full flex items-center justify-between py-4 px-8 bg-card border-b border-border shadow-card rounded-b-xl relative">
+      <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.location.href = '/'}>
+        <img src="/eros.png" alt="EROS Logo" className="h-14 w-auto" />
       </div>
-      <div className="hidden md:flex space-x-8 text-text text-base font-medium">
-        <a href="#features" className="hover:text-accent transition">Features</a>
-        <a href="#settings" className="hover:text-accent2 transition">Settings</a>
-        <a href="#logs" className="hover:text-accent3 transition">Logs</a>
+      <div className="hidden md:flex space-x-8 text-text text-base font-medium items-center">
+        <div className="relative group" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          <button
+            className={`hover:text-accent transition px-2 py-1 rounded ${toolsOpen ? 'bg-accent2 text-heading' : ''}`}
+            onClick={() => setToolsOpen((open) => !open)}
+            type="button"
+          >
+            Tools <span className="ml-1">▾</span>
+          </button>
+          {toolsOpen && (
+            <div className="absolute left-0 top-full mt-0 w-56 bg-[#182235] border border-border rounded-lg shadow-lg z-20 flex flex-col text-left animate-fade-in">
+              <a href="#eros-ai-analyst" className="px-5 py-3 hover:bg-accent3/10 hover:text-accent3 transition font-bold text-white tracking-wide text-lg" onClick={() => setToolsOpen(false)}>EROS AI ANALYST</a>
+              <a href="#eros-intel-tracker" className="px-5 py-3 hover:bg-accent3/10 hover:text-accent3 transition font-bold text-white tracking-wide text-lg" onClick={() => setToolsOpen(false)}>EROS INTEL TRACKER</a>
+              <a href="#eros-ai-agent" className="px-5 py-3 hover:bg-accent3/10 hover:text-accent3 transition font-bold text-white tracking-wide text-lg" onClick={() => setToolsOpen(false)}>EROS AI AGENT</a>
+              <a href="#eros-investigator" className="px-5 py-3 hover:bg-accent3/10 hover:text-accent3 transition font-bold text-white tracking-wide text-lg" onClick={() => setToolsOpen(false)}>EROS INVESTIGATOR</a>
+              <a href="#sniper-bot" className="px-5 py-3 hover:bg-accent3/10 hover:text-accent3 transition font-bold text-white tracking-wide text-lg" onClick={() => setToolsOpen(false)}>SNIPER BOT</a>
+            </div>
+          )}
+        </div>
         <a href="#about" className="hover:text-accent4 transition">About</a>
         <button
           className="hover:text-emerald-400 transition focus:outline-none"
@@ -22,10 +48,6 @@ const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
         >
           Whitepaper
         </button>
-      </div>
-      <div>
-        {/* Wallet Connect Button Placeholder */}
-        <button className="bg-accent2 text-heading px-5 py-2 rounded-lg font-audiowide font-bold hover:bg-accent transition">Connect Wallet</button>
       </div>
     </nav>
   );

@@ -6,4 +6,63 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Audiowide", sans-serif;
+  color: #fff86b; /* yellow for headings */
+}
+
+.text-heading-yellow {
+  color: #fff86b;
+}
+
+.text-heading-white {
+  color: #fff;
+  font-family: 'Cascadia Mono', monospace;
+}
+
+.text-important {
+  color: #fff86b;
+  font-weight: bold;
+}
+
+.code-block, pre, code {
+  background: #101c2c !important;
+  color: #fff !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: 'Share Tech Mono', 'monospace';
+  font-size: 1rem;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #0a1623; /* new dark blue */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b4a7a; /* blue accent */
+  border-radius: 8px;
+  border: 2px solid #0a1623;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fff86b; /* yellow primary on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2b4a7a #0a1623;
+}
+
+.cascadia-mono {
+  font-family: 'Cascadia Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-text {
+  color: #eaeaea;
+  font-family: 'Cascadia Mono', monospace;
 } 

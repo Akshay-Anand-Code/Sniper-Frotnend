@@ -6,15 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#0a0f1a',
-        card: '#101624',
-        accent: '#1de9b6',
-        accent2: '#00bfae',
-        accent3: '#ffc400',
-        accent4: '#ff5252',
-        border: '#232b3a',
-        text: '#b0b8c1',
+        background: '#0a1623',
+        card: '#101c2c',
+        accent: '#1a2e4a',
+        accent2: '#2b4a7a',
+        accent3: '#fff86b',
+        accent4: '#f8ff7a',
+        border: '#22304a',
+        text: '#eaeaea',
         heading: '#fff',
+        primary: '#fff86b',
+        secondary: '#2b4a7a',
       },
       fontFamily: {
         heading: ['Space Grotesk', 'Orbitron', 'Share Tech Mono', 'monospace'],
@@ -22,7 +24,8 @@ module.exports = {
         audiowide: ['"Audiowide"', 'sans-serif'],
       },
       boxShadow: {
-        card: '0 2px 8px 0 rgba(16,22,36,0.12)',
+        card: '0 2px 8px 0 rgba(26,46,74,0.18)',
+        glow: '0 0 32px 0 #1a2e4a',
       },
       borderRadius: {
         xl: '1rem',

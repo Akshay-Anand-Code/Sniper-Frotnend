@@ -21,16 +21,15 @@ const Hero: React.FC = () => {
           />
         </div>
         {/* Heading */}
-        <h1 className="relative z-10 text-5xl md:text-6xl font-audiowide font-bold text-heading">
-          EROS
-        </h1>
+        <img src="/eros.png" alt="EROS Logo" className="relative z-10 h-40 md:h-56 w-auto mx-auto" />
+        <div className="text-accent3 font-bold text-lg md:text-xl tracking-widest text-center mt-2 mb-4">V2.0</div>
       </div>
-      <p className="text-lg md:text-xl text-text mb-10 max-w-2xl mx-auto">
+      <p className="text-lg md:text-xl text-heading-white mb-10 max-w-2xl mx-auto">
         The ultimate toolkit for lightning-fast, secure token sniping on Solana. Experience professional-grade automation and analytics.
       </p>
       <div className="flex gap-4">
-        <button className="bg-accent3 text-heading px-8 py-3 rounded-lg font-audiowide font-bold hover:bg-accent2 transition text-lg">Start Sniping</button>
-        <button className="border border-accent2 text-accent2 px-8 py-3 rounded-lg font-audiowide font-bold hover:bg-card hover:text-heading transition text-lg">Learn More</button>
+        {/* <button className="bg-accent3 text-heading px-8 py-3 rounded-lg font-audiowide font-bold hover:bg-accent2 transition text-lg">Start Sniping</button> */}
+        <button className="border-2 border-accent2 text-heading-white bg-transparent px-8 py-3 rounded-lg font-audiowide font-bold transition text-lg hover:border-accent3 hover:text-accent3" onClick={() => { window.location.hash = '#whitepaper'; }}>Learn More</button>
       </div>
     </section>
   );

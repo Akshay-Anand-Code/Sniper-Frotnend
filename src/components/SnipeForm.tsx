@@ -15,23 +15,23 @@ const SnipeForm: React.FC = () => {
       <form className="space-y-6">
         <div>
           <label className="block text-text mb-2 font-medium">Token Address</label>
-          <input type="text" className="w-full px-4 py-2 rounded-lg bg-background border border-accent2 text-heading focus:outline-none focus:ring-2 focus:ring-accent2" placeholder="Enter token mint address" />
+          <input type="text" className="w-full px-4 py-2 rounded-lg bg-background border border-accent2 text-heading focus:outline-none focus:ring-2 focus:ring-accent2" placeholder="Enter token mint address" disabled />
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1">
             <label className="block text-text mb-2 font-medium">Amount (SOL)</label>
-            <input type="number" className="w-full px-4 py-2 rounded-lg bg-background border border-accent text-heading focus:outline-none focus:ring-2 focus:ring-accent" placeholder="0.01" min="0" step="any" />
+            <input type="number" className="w-full px-4 py-2 rounded-lg bg-background border border-accent text-heading focus:outline-none focus:ring-2 focus:ring-accent" placeholder="0.01" min="0" step="any" disabled />
           </div>
           <div className="flex-1">
             <label className="block text-text mb-2 font-medium">Take Profit (%)</label>
-            <input type="number" className="w-full px-4 py-2 rounded-lg bg-background border border-accent3 text-heading focus:outline-none focus:ring-2 focus:ring-accent3" placeholder="50" min="0" />
+            <input type="number" className="w-full px-4 py-2 rounded-lg bg-background border border-accent3 text-heading focus:outline-none focus:ring-2 focus:ring-accent3" placeholder="50" min="0" disabled />
           </div>
           <div className="flex-1">
             <label className="block text-text mb-2 font-medium">Stop Loss (%)</label>
-            <input type="number" className="w-full px-4 py-2 rounded-lg bg-background border border-accent4 text-heading focus:outline-none focus:ring-2 focus:ring-accent4" placeholder="15" min="0" />
+            <input type="number" className="w-full px-4 py-2 rounded-lg bg-background border border-accent4 text-heading focus:outline-none focus:ring-2 focus:ring-accent4" placeholder="15" min="0" disabled />
           </div>
         </div>
-        <button type="submit" className="w-full mt-4 bg-accent2 text-heading px-6 py-3 rounded-lg font-audiowide font-bold hover:bg-accent transition text-lg">Snipe Token</button>
+        <button type="submit" className="w-full mt-4 border-2 border-accent2 text-heading-white bg-transparent px-6 py-3 rounded-lg font-audiowide font-bold transition text-lg hover:border-accent3 hover:text-accent3" disabled>Snipe Token</button>
       </form>
     </motion.section>
   );

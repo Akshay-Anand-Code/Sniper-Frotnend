@@ -16,14 +16,12 @@ const features = [
 
 const WhyChooseUs: React.FC = () => (
   <section className="w-full py-16">
-    <h2 className="text-3xl font-audiowide font-bold text-heading text-center mb-4">Why Choose EROS?</h2>
-    <p className="text-text text-center max-w-2xl mx-auto mb-10">
-      Built by traders for traders, EROS represents the next evolution in decentralized trading. Our platform combines professional-grade tools with unmatched performance on Solana, delivering an experience that rivals traditional centralized exchanges while maintaining the benefits of decentralization.
-    </p>
+    
+    
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
       {stats.map((s, i) => (
         <SectionPanel key={i} icon={s.icon} accent={i === 0 ? 'accent2' : i === 1 ? 'accent3' : 'accent'} className="items-center text-center">
-          <div className="text-3xl font-audiowide font-bold text-heading mb-1">{s.title}</div>
+          <div className="text-3xl font-audiowide font-bold text-heading-yellow mb-1">{s.title}</div>
           <div className="text-accent2 font-audiowide font-bold text-lg mb-1">{s.desc}</div>
           <div className="text-text text-sm">{s.sub}</div>
         </SectionPanel>
@@ -32,9 +30,9 @@ const WhyChooseUs: React.FC = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {features.map((f, i) => (
         <SectionPanel key={i} icon={f.icon} accent={['accent2','accent3','accent','accent4'][i]}>
-          <div className="text-lg font-audiowide font-bold text-heading mb-1">{f.title}</div>
+          <div className="text-lg font-audiowide font-bold text-heading-yellow mb-1">{f.title}</div>
           <div className="text-text text-base mb-2">{f.desc}</div>
-          <ul className="list-disc list-inside text-accent2 text-sm pl-2">
+          <ul className="list-disc list-inside text-text text-sm pl-2">
             {f.bullets.map((b, j) => <li key={j}>{b}</li>)}
           </ul>
         </SectionPanel>
