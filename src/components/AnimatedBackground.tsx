@@ -13,7 +13,7 @@ const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
   direction = 'horizontal',
   color = '#b0b8c1',
   opacity = 0.13,
-  dotSize = 1.5,
+  dotSize = 100,
   speed = 8, // px/sec, lower = slower
   patternSize = 28,
 }) => {

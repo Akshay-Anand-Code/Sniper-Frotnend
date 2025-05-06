@@ -109,13 +109,13 @@ const ErosAIAgent: React.FC = () => {
         <h2 className="text-3xl font-bold text-accent2 mb-2">EROS AI AGENT</h2>
         <p className="text-muted text-base">Your AI-powered crypto analyst. Ask anything about the crypto markets!</p>
       </div>
-      <div className="flex-1 bg-card border border-accent2 rounded-xl p-6 overflow-y-auto mb-4">
+      <div className="flex-1 bg-card border border-accent2 rounded-xl p-6 overflow-y-auto mb-4" style={{ minHeight: '320px', color: 'inherit' }}>
         {messages.length === 0 && (
           <div className="text-muted text-center">Start the conversation by asking a question about crypto trading, DeFi, or blockchain.</div>
         )}
         {messages.map((msg, idx) => (
           <div key={idx} className={`mb-4 flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`rounded-lg px-4 py-2 max-w-[80%] ${msg.role === 'user' ? 'bg-accent2 text-heading' : 'bg-background border border-accent2 text-accent2'}`}>
+            <div className={`rounded-lg px-4 py-2 max-w-[80%] ${msg.role === 'user' ? 'bg-accent2 text-heading' : 'bg-background border border-accent2 text-white'}`}>
               {msg.text}
             </div>
           </div>
@@ -129,7 +129,7 @@ const ErosAIAgent: React.FC = () => {
         )}
         <div ref={messagesEndRef} />
       </div>
-      <form onSubmit={handleSend} className="flex gap-2">
+      <form onSubmit={handleSend} className="flex gap-2 mt-4 mb-2">
         <input
           className="flex-1 px-4 py-2 rounded-lg border border-border bg-background text-text focus:outline-none"
           type="text"

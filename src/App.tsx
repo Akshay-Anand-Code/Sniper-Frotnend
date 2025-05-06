@@ -19,6 +19,7 @@ import ErosInvestigator from './components/ErosInvestigator';
 import JupiterSwapWidget from './components/JupiterSwapWidget';
 import SectionHeader from './components/SectionHeader';
 import { FaCoins, FaTools, FaCode, FaHandshake } from 'react-icons/fa';
+import FloatingChatbot from './components/FloatingChatbot';
 
 const sectionSpring = {
   initial: { opacity: 0, y: 40 },
@@ -182,32 +183,41 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
+      {/* Vignette effect for main landing page */}
+      <div
+        className="pointer-events-none fixed inset-0 z-0"
+        aria-hidden="true"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.55) 100%)',
+        }}
+      />
       <AnimatedBackground 
         direction="horizontal"
         color="#b0b8c1"
         opacity={0.13}
-        dotSize={1.5}
+        dotSize={1}
         speed={20}
       />
+      <FloatingChatbot />
       <div className="relative z-10">
         <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
         <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
           <motion.div variants={staggerContainer} initial="hidden" animate="show">
             <motion.div {...sectionSpring}><Hero /></motion.div>
             <SectionHeader
-              icon={<FaCoins size={32} className="text-accent3" />}
+              
               title="$Eros Token"
               subtitle="The native utility token powering the EROS ecosystem."
             />
             <motion.div {...sectionSpring}><TokenInfo /></motion.div>
             <SectionHeader
-              icon={<FaTools size={32} className="text-accent3" />}
+              
               title="Why Choose Us"
               subtitle="Professional-grade tools, analytics, and automation."
             />
             <motion.div {...sectionSpring}><WhyChooseUs /></motion.div>
             <SectionHeader
-              icon={<FaCode size={32} className="text-accent3" />}
+              
               title="Developer API"
               subtitle="Integrate EROS with your own trading infrastructure."
             />
