@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const STAR_COUNT = 120;
+const STAR_COUNT = 60;
 const STAR_MIN_RADIUS = 0.3;
 const STAR_MAX_RADIUS = 1.1;
 const STAR_MIN_ALPHA = 0.25;
@@ -85,7 +85,7 @@ const Starfield: React.FC = () => {
         ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
         ctx.fillStyle = '#fffbe6';
         ctx.shadowColor = '#fffbe6';
-        ctx.shadowBlur = 4;
+        ctx.shadowBlur = 1;
         ctx.fill();
         ctx.restore();
       }
