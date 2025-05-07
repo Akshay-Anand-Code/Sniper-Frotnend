@@ -20,6 +20,8 @@ import JupiterSwapWidget from './components/JupiterSwapWidget';
 import SectionHeader from './components/SectionHeader';
 import { FaCoins, FaTools, FaCode, FaHandshake } from 'react-icons/fa';
 import FloatingChatbot from './components/FloatingChatbot';
+import Spline from '@splinetool/react-spline';
+import Starfield from './components/Starfield';
 
 const sectionSpring = {
   initial: { opacity: 0, y: 40 },
@@ -59,13 +61,6 @@ const App: React.FC = () => {
   if (hash === '#sniper-bot') {
     return (
       <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-        <AnimatedBackground 
-          direction="horizontal"
-          color="#b0b8c1"
-          opacity={0.13}
-          dotSize={1.5}
-          speed={20}
-        />
         <div className="relative z-10">
           <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
           <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
@@ -100,13 +95,6 @@ const App: React.FC = () => {
   if (hash === '#eros-investigator') {
     return (
       <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-        <AnimatedBackground 
-          direction="horizontal"
-          color="#b0b8c1"
-          opacity={0.13}
-          dotSize={1.5}
-          speed={20}
-        />
         <div className="relative z-10">
           <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
           <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
@@ -121,13 +109,6 @@ const App: React.FC = () => {
   if (hash === '#eros-ai-agent') {
     return (
       <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-        <AnimatedBackground 
-          direction="horizontal"
-          color="#b0b8c1"
-          opacity={0.13}
-          dotSize={1.5}
-          speed={20}
-        />
         <div className="relative z-10">
           <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
           <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
@@ -142,13 +123,6 @@ const App: React.FC = () => {
   if (hash === '#eros-intel-tracker') {
     return (
       <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-        <AnimatedBackground 
-          direction="horizontal"
-          color="#b0b8c1"
-          opacity={0.13}
-          dotSize={1.5}
-          speed={20}
-        />
         <div className="relative z-10">
           <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
           <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
@@ -163,13 +137,6 @@ const App: React.FC = () => {
   if (hash === '#eros-ai-analyst') {
     return (
       <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-        <AnimatedBackground 
-          direction="horizontal"
-          color="#b0b8c1"
-          opacity={0.13}
-          dotSize={1.5}
-          speed={20}
-        />
         <div className="relative z-10">
           <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
           <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
@@ -182,47 +149,57 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background font-body text-text flex flex-col relative overflow-x-hidden">
-      {/* Vignette effect for main landing page */}
+    <div className="min-h-screen bg-black font-body text-text flex flex-col relative overflow-x-hidden">
+      {/* Shiny glossy overlay */}
       <div
         className="pointer-events-none fixed inset-0 z-0"
+        aria-hidden="true"
+        style={{
+          background: 'radial-gradient(ellipse at top, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0) 70%)'
+        }}
+      />
+      {/* Twinkling starfield effect */}
+      <Starfield />
+      {/* Vignette effect for main landing page */}
+      <div
+        className="pointer-events-none fixed inset-0 z-10"
         aria-hidden="true"
         style={{
           background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,0.55) 100%)',
         }}
       />
-      <AnimatedBackground 
-        direction="horizontal"
-        color="#b0b8c1"
-        opacity={0.13}
-        dotSize={1}
-        speed={20}
-      />
       <FloatingChatbot />
-      <div className="relative z-10">
+      <div className="relative z-20">
         <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
         <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
           <motion.div variants={staggerContainer} initial="hidden" animate="show">
             <motion.div {...sectionSpring}><Hero /></motion.div>
             <SectionHeader
-              
               title="$Eros Token"
               subtitle="The native utility token powering the EROS ecosystem."
             />
             <motion.div {...sectionSpring}><TokenInfo /></motion.div>
             <SectionHeader
-              
               title="Why Choose Us"
               subtitle="Professional-grade tools, analytics, and automation."
             />
             <motion.div {...sectionSpring}><WhyChooseUs /></motion.div>
             <SectionHeader
-              
               title="Developer API"
               subtitle="Integrate EROS with your own trading infrastructure."
             />
             <motion.div {...sectionSpring}><DeveloperAPI /></motion.div>
-            <section className="w-full flex flex-col items-center justify-center py-20">
+          </motion.div>
+        </main>
+        {/* Wrapper for Built On section and Footer */}
+        <div className="relative w-full overflow-hidden" style={{ minHeight: '100vh' }}>
+          {/* Spline 3D Background */}
+          <div className="absolute inset-0 w-full h-full z-0 pointer-events-none" style={{ opacity: 0.35 }}>
+            <Spline scene="https://prod.spline.design/DNsQZow13xxBcaab/scene.splinecode" />
+          </div>
+          {/* Built On Section */}
+          <section className="relative w-full flex flex-col items-center justify-center py-20 z-10" style={{ minHeight: '80vh' }}>
+            <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
               <div className="flex flex-col items-center mb-8">
                 <div className="bg-emerald-700/20 rounded-full p-3 mb-4">
                   <svg width="32" height="32" fill="none" stroke="#10b981" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -230,7 +207,7 @@ const App: React.FC = () => {
                 <h2 className="text-3xl font-bold text-center mb-2" style={{ fontFamily: 'Cascadia Mono, monospace' }}>Built on</h2>
                 <p className="text-emerald-400 font-mono text-sm mb-6 tracking-widest">INSTITUTIONAL-GRADE PARTNERS</p>
                 <p className="text-text text-center max-w-2xl mx-auto mb-8 cascadia-mono text-base md:text-lg">
-                We're revolutionizing your trading experience with cutting-edge intelligence tools, forged through strategic partnerships with the best in the industry. By uniting Solana's lightning-fast blockchain, Jupiter's extensive liquidity aggregation, and QuickNode's robust infrastructure, we've created an unparalleled trading environment. This powerful synergy allows us to deliver sophisticated, institutional-grade features while maintaining the intuitive accessibility you expect. Our collaborations are building a robust ecosystem that redefines the possibilities of decentralized finance, empowering you with the intelligence needed to trade with confidence.
+                  We're revolutionizing your trading experience with cutting-edge intelligence tools, forged through strategic partnerships with the best in the industry. By uniting Solana's lightning-fast blockchain, Jupiter's extensive liquidity aggregation, and QuickNode's robust infrastructure, we've created an unparalleled trading environment. This powerful synergy allows us to deliver sophisticated, institutional-grade features while maintaining the intuitive accessibility you expect. Our collaborations are building a robust ecosystem that redefines the possibilities of decentralized finance, empowering you with the intelligence needed to trade with confidence.
                 </p>
               </div>
               <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
@@ -253,10 +230,13 @@ const App: React.FC = () => {
                   <span className="text-sm text-text">Enterprise-grade node infrastructure</span>
                 </div>
               </div>
-            </section>
-          </motion.div>
-        </main>
-        <Footer />
+            </div>
+          </section>
+          {/* Footer */}
+          <div className="relative z-10">
+            <Footer />
+          </div>
+        </div>
       </div>
     </div>
   );
