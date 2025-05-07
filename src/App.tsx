@@ -22,6 +22,7 @@ import { FaCoins, FaTools, FaCode, FaHandshake } from 'react-icons/fa';
 import FloatingChatbot from './components/FloatingChatbot';
 import Spline from '@splinetool/react-spline';
 import Starfield from './components/Starfield';
+import Loader from './components/Loader';
 
 const sectionSpring = {
   initial: { opacity: 0, y: 40 },
@@ -43,11 +44,49 @@ const App: React.FC = () => {
   const [showWhitepaper, setShowWhitepaper] = React.useState(false);
   const [hash, setHash] = React.useState(window.location.hash);
 
+  // Loader state
+  const [loaded, setLoaded] = React.useState(false);
+  const [percent, setPercent] = React.useState(0);
+
+  // List of assets to track (add more as needed)
+  const assets = [
+    '/eros.png',
+    '/erosvideo.mp4',
+    // Add more asset URLs if needed
+  ];
+
   React.useEffect(() => {
-    const onHashChange = () => setHash(window.location.hash);
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
+    let loadedCount = 0;
+    const start = Date.now();
+    function handleAssetLoad() {
+      loadedCount++;
+      setPercent(Math.round((loadedCount / assets.length) * 100));
+      if (loadedCount === assets.length) {
+        const elapsed = Date.now() - start;
+        const minDelay = 2000; // 2 seconds
+        const remaining = Math.max(0, minDelay - elapsed);
+        setTimeout(() => setLoaded(true), remaining);
+      }
+    }
+    assets.forEach((src) => {
+      if (src.endsWith('.mp4')) {
+        const video = document.createElement('video');
+        video.src = src;
+        video.oncanplaythrough = handleAssetLoad;
+        video.onerror = handleAssetLoad;
+      } else {
+        const img = new window.Image();
+        img.src = src;
+        img.onload = handleAssetLoad;
+        img.onerror = handleAssetLoad;
+      }
+    });
+    // eslint-disable-next-line
   }, []);
+
+  if (!loaded) {
+    return <Loader percent={percent} />;
+  }
 
   if (showWhitepaper) {
     return (
@@ -173,7 +212,7 @@ const App: React.FC = () => {
         <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
         <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
           <motion.div variants={staggerContainer} initial="hidden" animate="show">
-            <Hero />
+            <motion.div {...sectionSpring}><Hero /></motion.div>
             <SectionHeader
               title="$Eros Token"
               subtitle="The native utility token powering the EROS ecosystem."
