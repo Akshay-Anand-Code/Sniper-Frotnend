@@ -173,7 +173,7 @@ const App: React.FC = () => {
         <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
         <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
           <motion.div variants={staggerContainer} initial="hidden" animate="show">
-            <motion.div {...sectionSpring}><Hero /></motion.div>
+            <Hero />
             <SectionHeader
               title="$Eros Token"
               subtitle="The native utility token powering the EROS ecosystem."
