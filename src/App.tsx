@@ -55,6 +55,13 @@ const App: React.FC = () => {
     // Add more asset URLs if needed
   ];
 
+  // Listen for hash changes to update the hash state
+  React.useEffect(() => {
+    const onHashChange = () => setHash(window.location.hash);
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
+
   React.useEffect(() => {
     let loadedCount = 0;
     const start = Date.now();
