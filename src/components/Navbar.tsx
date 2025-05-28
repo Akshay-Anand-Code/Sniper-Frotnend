@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 interface NavbarProps {
   onWhitepaperClick?: () => void;
@@ -48,6 +49,16 @@ const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
         >
           Whitepaper
         </button>
+        <a
+          href="https://x.com/ErosIntel"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 hover:text-accent3 transition font-bold"
+          aria-label="ErosIntel on X"
+        >
+          <FaXTwitter className="text-xl" />
+          <span className="hidden md:inline">ErosIntel</span>
+        </a>
       </div>
     </nav>
   );
