@@ -30,12 +30,9 @@ const Hero: React.FC = () => {
               <span className="absolute -top-2 -right-2 bg-black/80 px-3 py-1 rounded-lg text-accent3 font-bold text-xs md:text-base tracking-widest shadow-lg border border-accent3">V2.0</span>
             </div>
           </div>
-          <p className="text-lg md:text-xl text-heading-white mb-4 max-w-2xl mx-auto">
-            The ultimate toolkit for lightning-fast, secure token sniping on Solana. Experience professional-grade automation and analytics.
+          <p className="text-lg md:text-xl text-heading-white mb-10 max-w-2xl mx-auto">
+             Experience professional-grade automation and analytics.
           </p>
-          <div className="flex gap-4 mb-6">
-            {/* Learn More button removed */}
-          </div>
           {/* Video embedded in hero section */}
           <div className="w-full flex justify-center items-center relative">
             {/* Sky blue glow above video */}

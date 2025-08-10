@@ -4,18 +4,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Bank Gothic';
+  src: url('/fonts/BankGothic Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Audiowide", sans-serif;
+  font-family: "Bank Gothic", sans-serif;
   color: #fff86b; /* yellow for headings */
+  text-transform: uppercase;
 }
 
 .text-heading-yellow {
   color: #fff86b;
+  font-family: "Bank Gothic", sans-serif;
+  text-transform: uppercase;
 }
 
 .text-heading-white {
   color: #fff;
-  font-family: 'Cascadia Mono', monospace;
+  font-family: "Bank Gothic", sans-serif;
+  text-transform: uppercase;
 }
 
 .text-important {
@@ -28,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
   border-radius: 0.5rem;
   padding: 1rem;
-  font-family: 'Share Tech Mono', 'monospace';
+  font-family: 'Cascadia Mono', monospace;
   font-size: 1rem;
 }
 
@@ -64,5 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-text {
   color: #eaeaea;
-  font-family: 'Cascadia Mono', monospace;
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn {
+  font-family: 'Manrope', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
 } 

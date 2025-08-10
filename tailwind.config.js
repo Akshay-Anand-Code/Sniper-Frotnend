@@ -19,8 +19,8 @@ module.exports = {
         secondary: '#2b4a7a',
       },
       fontFamily: {
-        heading: ['Space Grotesk', 'Orbitron', 'Share Tech Mono', 'monospace'],
-        body: ['Inter', 'Roboto', 'Arial', 'sans-serif'],
+        heading: ['"Bank Gothic"', 'sans-serif'],
+        body: ['Manrope', 'sans-serif'],
         audiowide: ['"Audiowide"', 'sans-serif'],
       },
       boxShadow: {

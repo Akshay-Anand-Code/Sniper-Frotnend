@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import TokenInfo from './components/TokenInfo';
 import DeveloperAPI from './components/DeveloperAPI';
 import WhyChooseUs from './components/WhyChooseUs';
+import DocsPage from './components/DocsPage';
 // import SettingsPanel from './components/SettingsPanel';
 import SnipeForm from './components/SnipeForm';
 import LiveLogs from './components/LiveLogs';
@@ -23,6 +24,7 @@ import FloatingChatbot from './components/FloatingChatbot';
 import Spline from '@splinetool/react-spline';
 import Starfield from './components/Starfield';
 import Loader from './components/Loader';
+import DocsPage from './components/DocsPage';
 
 const sectionSpring = {
   initial: { opacity: 0, y: 40 },
@@ -193,6 +195,16 @@ const App: React.FC = () => {
       </div>
     );
   }
+  
+  if (hash === '#docs') {
+    return (
+      <>
+        <Navbar onWhitepaperClick={() => setShowWhitepaper(true)} />
+        <DocsPage />
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-black font-body text-text flex flex-col relative overflow-x-hidden">
@@ -220,11 +232,13 @@ const App: React.FC = () => {
         <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
           <motion.div variants={staggerContainer} initial="hidden" animate="show">
             <motion.div {...sectionSpring}><Hero /></motion.div>
-            <SectionHeader
-              title="$Eros Token"
-              subtitle="The native utility token powering the EROS ecosystem."
-            />
-            <motion.div {...sectionSpring}><TokenInfo /></motion.div>
+            <div id="eros-token">
+              <SectionHeader
+                title="$Eros Token"
+                subtitle="The native utility token powering the EROS ecosystem."
+              />
+              <motion.div {...sectionSpring}><TokenInfo onWhitepaperClick={() => setShowWhitepaper(true)} /></motion.div>
+            </div>
             <SectionHeader
               title="Why Choose Us"
               subtitle="Professional-grade tools, analytics, and automation."

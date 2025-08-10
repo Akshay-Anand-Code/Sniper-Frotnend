@@ -10,12 +10,32 @@ const Footer: React.FC = () => {
       className="w-full py-8 mt-8 bg-card border-t border-border text-center text-text rounded-t-xl shadow-card font-body"
     >
       <div className="mb-2">
-        <span className="text-accent font-audiowide font-bold">EROS</span> &copy; {new Date().getFullYear()}
+        <span className="text-accent3 font-heading font-bold">EROS</span> &copy; 2025
       </div>
-      <div className="space-x-4">
-        <a href="#" className="hover:text-accent2 transition">Docs</a>
-        <a href="#" className="hover:text-accent3 transition">GitHub</a>
-        <a href="#" className="hover:text-accent4 transition">Contact</a>
+      <div className="space-x-4 font-body">
+        <a 
+          href="#" 
+          onClick={(e) => { e.preventDefault(); alert('Documentation coming soon!'); }}
+          className="hover:text-accent2 transition"
+        >
+          Docs
+        </a>
+        <a 
+          href="https://github.com/ErosIntel" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-accent3 transition"
+        >
+          GitHub
+        </a>
+        <a 
+          href="https://x.com/ErosIntel" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-accent4 transition"
+        >
+          Contact
+        </a>
       </div>
     </motion.footer>
   );

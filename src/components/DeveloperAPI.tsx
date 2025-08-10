@@ -2,6 +2,7 @@ import React from 'react';
 import SectionPanel from './SectionPanel';
 import Spline from '@splinetool/react-spline';
 
+// Code for desktop view
 const code = `import { EROSClient } from '@EROS/sdk';
 
 // Initialize EROS Client
@@ -11,6 +12,17 @@ const client = new EROSClient({
 });
 // Get market data
 const marketData = await client.getMarketData();
+`;
+
+// Simplified code for mobile view
+const mobileCode = `import { EROSClient } from '@EROS/sdk';
+
+const client = new EROSClient({
+  env: 'mainnet',
+  apikey: process.env.EROS_API_KEY
+});
+
+const data = await client.getMarketData();
 `;
 
 const DeveloperAPI: React.FC = () => (
@@ -56,13 +68,27 @@ const DeveloperAPI: React.FC = () => (
             <p className="text-text mb-6">
               Integrate EROS trading into your app with our simple API and SDK.
             </p>
-            <pre className="text-base bg-[#10151f] border-l-4 border-accent3 rounded-lg p-4 shadow-lg overflow-x-auto whitespace-pre font-mono mb-6" style={{fontFamily: 'Fira Mono, Menlo, Monaco, Consolas, monospace', boxShadow: '0 4px 24px 0 #0a1623cc', color: '#eaeaea'}}>
+            {/* Desktop code view */}
+            <pre className="hidden md:block text-base bg-[#10151f] border-l-4 border-accent3 rounded-lg p-4 shadow-lg overflow-x-auto whitespace-pre font-mono mb-6" style={{fontFamily: 'Cascadia Mono, monospace', boxShadow: '0 4px 24px 0 #0a1623cc', color: '#eaeaea'}}>
 {code}
+            </pre>
+            
+            {/* Mobile code view - simplified */}
+            <pre className="md:hidden text-sm bg-[#10151f] border-l-4 border-accent3 rounded-lg p-3 shadow-lg overflow-x-auto whitespace-pre font-mono mb-6" style={{fontFamily: 'Cascadia Mono, monospace', boxShadow: '0 4px 24px 0 #0a1623cc', color: '#eaeaea'}}>
+{mobileCode}
             </pre>
           </div>
           <div className="flex gap-4 mt-2">
-            <button className="border-2 border-accent2 text-heading-white bg-transparent px-4 py-2 rounded-lg font-audiowide font-bold transition hover:border-accent3 hover:text-accent3">Get Started</button>
-            <button className="border-2 border-accent2 text-heading-white bg-transparent px-4 py-2 rounded-lg font-audiowide font-bold transition hover:border-accent3 hover:text-accent3">Docs</button>
+            <a 
+              href="/docs"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = window.location.origin + '/#docs';
+              }}
+              className="btn border-2 border-accent2 text-heading-white bg-transparent px-4 py-2 rounded-lg transition hover:border-accent3 hover:text-accent3 inline-flex items-center justify-center"
+            >
+              DOCS
+            </a>
           </div>
         </SectionPanel>
       </div>
