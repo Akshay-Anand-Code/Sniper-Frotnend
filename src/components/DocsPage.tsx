@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const DocsPage: React.FC = () => {
   useEffect(() => {
@@ -81,6 +82,15 @@ const DocsPage: React.FC = () => {
                 <p className="text-sm text-gray-400 text-center mb-4">
                   Specializes in Solana blockchain development and high-performance trading systems.
                 </p>
+                <a 
+                  href="https://x.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-accent3 transition-colors"
+                  aria-label="Twitter profile"
+                >
+                  <FaXTwitter size={18} />
+                </a>
               </div>
               
               {/* Developer 2 */}
@@ -96,6 +106,15 @@ const DocsPage: React.FC = () => {
                 <p className="text-sm text-gray-400 text-center mb-4">
                   Expert in React, TypeScript and building intuitive trading interfaces.
                 </p>
+                <a 
+                  href="https://x.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-accent3 transition-colors"
+                  aria-label="Twitter profile"
+                >
+                  <FaXTwitter size={18} />
+                </a>
               </div>
             </div>
           </div>

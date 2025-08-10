@@ -75,13 +75,13 @@ const MarkdownSection: React.FC<MarkdownSectionProps> = ({ filename, content: pr
     
     // Otherwise fetch from file if filename is provided
     if (filename) {
-      setError(false);
+    setError(false);
       setLoading(true);
-      fetch(`/whitepaper/${filename}.md`)
-        .then((res) => {
-          if (!res.ok) throw new Error('Not found');
-          return res.text();
-        })
+    fetch(`/whitepaper/${filename}.md`)
+      .then((res) => {
+        if (!res.ok) throw new Error('Not found');
+        return res.text();
+      })
         .then((text) => {
           setContent(text);
           setLoading(false);
@@ -116,8 +116,8 @@ const MarkdownSection: React.FC<MarkdownSectionProps> = ({ filename, content: pr
     <div className="relative">
       {/* Content container with improved layout */}
       <div className="relative z-10">
-        <ReactMarkdown
-          components={{
+      <ReactMarkdown
+        components={{
             h1: ({node, ...props}) => (
               <h1 id={props.children[0]?.toString().toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')} 
                 className="font-heading uppercase text-3xl md:text-4xl text-accent3 font-bold mb-6 tracking-wider pb-3 flex items-center gap-3 border-b border-accent2/30">
@@ -214,10 +214,10 @@ const MarkdownSection: React.FC<MarkdownSectionProps> = ({ filename, content: pr
               </div>
             ),
             hr: ({node, ...props}) => <hr className="my-6 border-t border-accent2/30" />,
-          }}
-        >
-          {content}
-        </ReactMarkdown>
+        }}
+      >
+        {content}
+      </ReactMarkdown>
       </div>
     </div>
   );
