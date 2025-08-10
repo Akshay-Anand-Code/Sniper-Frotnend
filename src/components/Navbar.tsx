@@ -48,9 +48,22 @@ const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
           )}
         </div>
         <a href="#eros-token" className="hover:text-accent4 transition">About</a>
+        <a href="#docs" className="hover:text-accent4 transition" onClick={(e) => {
+          e.preventDefault();
+          window.location.hash = 'docs';
+          setTimeout(() => {
+            const teamSection = document.querySelector('#development-team');
+            if (teamSection) {
+              teamSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              window.scrollTo(0, 0);
+            }
+          }, 100);
+        }}>Team</a>
         <button
           className="hover:text-emerald-400 transition focus:outline-none"
           onClick={onWhitepaperClick}
+          data-whitepaper-trigger
         >
           Whitepaper
         </button>
@@ -99,12 +112,32 @@ const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
               )}
             </div>
             <a href="#eros-token" className="px-6 py-4 hover:bg-accent2/20 transition border-b border-border" onClick={() => setMobileMenuOpen(false)}>About</a>
+            <a 
+              href="#docs" 
+              className="px-6 py-4 hover:bg-accent2/20 transition border-b border-border" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.hash = 'docs';
+                setMobileMenuOpen(false);
+                setTimeout(() => {
+                  const teamSection = document.querySelector('#development-team');
+                  if (teamSection) {
+                    teamSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.scrollTo(0, 0);
+                  }
+                }, 100);
+              }}
+            >
+              Team
+            </a>
             <button
               className="px-6 py-4 hover:bg-accent2/20 transition text-left border-b border-border"
               onClick={() => {
                 onWhitepaperClick?.();
                 setMobileMenuOpen(false);
               }}
+              data-whitepaper-trigger
             >
               Whitepaper
             </button>

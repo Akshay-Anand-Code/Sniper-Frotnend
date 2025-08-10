@@ -37,21 +37,25 @@ const TokenInfo: React.FC<TokenInfoProps> = ({ onWhitepaperClick }) => (
     <div className="flex flex-col md:flex-row gap-10 items-center md:items-stretch">
       {/* Info Panel */}
       <div className="flex-1 flex flex-col justify-between">
-        <SectionPanel accent="accent" className="h-full flex flex-col justify-between">
-          <div>
-            <h2 className="text-3xl font-audiowide font-bold text-heading-yellow mb-4">$Eros</h2>
-            <p className="text-text mb-6">
-              The native utility token powering the EROS ecosystem, designed to align incentives across users, liquidity providers, and the platform. 
-              $EROS represents more than just a token – it's your key to accessing premium features, participating in governance, and earning rewards through various platform activities. 
-              EROS holders become true stakeholders in the future of decentralized trading.
-            </p>
-            <div className="mt-4">
-              <button
-                onClick={onWhitepaperClick}
-                className="btn border-2 border-accent2 text-white bg-transparent px-6 py-2 rounded-lg transition hover:border-accent3 hover:text-accent3"
-              >
-                Learn More
-              </button>
+        <SectionPanel accent="accent" className="h-full flex items-center justify-center" style={{ maxWidth: "90%", margin: "0 auto" }}>
+          <div className="py-6">
+            <div className="max-w-md text-left">
+              <h2 className="text-3xl font-audiowide font-bold text-heading-yellow mb-4">$Eros</h2>
+              <p className="text-text mb-6">
+                The native utility token powering the EROS ecosystem, designed to align incentives across users, liquidity providers, and the platform. 
+                $EROS represents more than just a token – it's your key to accessing premium features, participating in governance, and earning rewards through various platform activities.
+                <br />
+                <br />
+                EROS holders become true stakeholders in the future of decentralized trading.
+              </p>
+              <div className="mt-4 flex justify-center">
+                <button
+                  onClick={onWhitepaperClick}
+                  className="btn border-2 border-accent2 text-white bg-transparent px-6 py-2 rounded-lg transition hover:border-accent3 hover:text-accent3"
+                >
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
 

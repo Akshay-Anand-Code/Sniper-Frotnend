@@ -65,7 +65,7 @@ const DocsPage: React.FC = () => {
             </div>
           </div>
           
-          <div className="mb-6">
+          <div id="development-team" className="mb-6">
             <h2 className="text-2xl font-heading uppercase text-accent2 font-bold mb-6">Development Team</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Developer 1 */}

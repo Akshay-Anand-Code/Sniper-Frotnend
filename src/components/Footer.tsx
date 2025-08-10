@@ -14,22 +14,31 @@ const Footer: React.FC = () => {
       </div>
       <div className="space-x-4 font-body">
         <a 
-          href="#" 
-          onClick={(e) => { e.preventDefault(); alert('Documentation coming soon!'); }}
+          href="#docs"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.hash = 'docs';
+            setTimeout(() => window.scrollTo(0, 0), 10);
+          }}
           className="hover:text-accent2 transition"
         >
           Docs
         </a>
         <a 
-          href="https://github.com/ErosIntel" 
-          target="_blank" 
-          rel="noopener noreferrer" 
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            const whitepaper = document.querySelector('[data-whitepaper-trigger]');
+            if (whitepaper) {
+              (whitepaper as HTMLElement).click();
+            }
+          }}
           className="hover:text-accent3 transition"
         >
-          GitHub
+          Whitepaper
         </a>
         <a 
-          href="https://x.com/ErosIntel" 
+          href="https://x.com/ErosIntelSol" 
           target="_blank" 
           rel="noopener noreferrer" 
           className="hover:text-accent4 transition"
