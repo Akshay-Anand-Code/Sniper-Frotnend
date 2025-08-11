@@ -71,19 +71,16 @@ const DocsPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Developer 1 */}
               <div className="bg-gray-900/40 p-6 rounded-lg border border-accent2/20 flex flex-col items-center">
+                <h3 className="text-xl font-heading text-accent3 mb-4">coin_crypt1c</h3>
                 <div className="w-24 h-24 rounded-full bg-accent2/20 mb-4 overflow-hidden flex items-center justify-center">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#fff86b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#fff86b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src="/coin.jpg" alt="Lead Developer" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-heading text-accent3 mb-1">Lead Developer</h3>
-                <p className="text-gray-300 font-body mb-3 text-center">Backend & Blockchain Integration</p>
+                <p className="text-gray-300 font-body mb-3 text-center">LEAD DEVELOPER </p>
                 <p className="text-sm text-gray-400 text-center mb-4">
-                  Specializes in Solana blockchain development and high-performance trading systems.
+                 Specializes in Backend, Solana blockchain development and high-performance trading systems.
                 </p>
                 <a 
-                  href="https://x.com" 
+                  href="https://x.com/coin_crypt1c" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-accent3 transition-colors"
@@ -95,19 +92,16 @@ const DocsPage: React.FC = () => {
               
               {/* Developer 2 */}
               <div className="bg-gray-900/40 p-6 rounded-lg border border-accent2/20 flex flex-col items-center">
+                <h3 className="text-xl font-heading text-accent3 mb-4">DegenPilgrim</h3>
                 <div className="w-24 h-24 rounded-full bg-accent2/20 mb-4 overflow-hidden flex items-center justify-center">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="#fff86b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#fff86b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <img src="/degen.jpg" alt="Frontend Lead" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-heading text-accent3 mb-1">Frontend Lead</h3>
-                <p className="text-gray-300 font-body mb-3 text-center">UI/UX & API Integration</p>
+                <p className="text-gray-300 font-body mb-3 text-center">FRONTEND LEAD</p>
                 <p className="text-sm text-gray-400 text-center mb-4">
-                  Expert in React, TypeScript and building intuitive trading interfaces.
+                UI/UX & API Integration.Expert in React, TypeScript and building intuitive trading interfaces.
                 </p>
                 <a 
-                  href="https://x.com" 
+                  href="https://x.com/DegenPilgrim" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-accent3 transition-colors"

@@ -48,7 +48,7 @@ const TokenInfo: React.FC<TokenInfoProps> = ({ onWhitepaperClick }) => (
                 <br />
                 EROS holders become true stakeholders in the future of decentralized trading.
               </p>
-              <div className="mt-4 flex justify-center">
+              <div className="mt-4 flex justify-start">
                 <button
                   onClick={onWhitepaperClick}
                   className="btn border-2 border-accent2 text-white bg-transparent px-6 py-2 rounded-lg transition hover:border-accent3 hover:text-accent3"
