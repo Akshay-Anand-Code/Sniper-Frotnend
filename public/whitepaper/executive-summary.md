@@ -51,8 +51,8 @@ The platform is built on four key technological pillars:
 
 EROS is being developed according to a strategic roadmap that balances immediate user needs with long-term vision:
 
-- **Phase 1** (Q1-Q2 2026): Platform launch with core functionality
-- **Phase 2** (Q3-Q4 2026): Expansion of tools and token launch
+- **Phase 1** (Q1-Q2 2025): Platform launch with core functionality
+- **Phase 2** (Q3-Q4 2025): Expansion of tools and token launch
 - **Phase 3** (Q1-Q2 2026): Advanced features and cross-chain capabilities
 - **Phase 4** (Q3-Q4 2026): Ecosystem growth and institutional features
 
