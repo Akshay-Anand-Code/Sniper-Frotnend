@@ -4,7 +4,7 @@
 
 The EROS platform is being developed according to a strategic roadmap that balances immediate user needs with long-term vision. This roadmap outlines the planned evolution of the platform across multiple phases:
 
-### 6.1.1 Phase 1: Foundation (Q1-Q2 2024)
+### 6.1.1 Phase 1: Foundation (Q1-Q2 2025)
 
 - **Platform Launch**: Initial release of the core EROS platform with essential functionality
 - **EROS AI Analyst Beta**: First version of the AI-powered chart analysis tool
@@ -12,7 +12,7 @@ The EROS platform is being developed according to a strategic roadmap that balan
 - **Basic Sniper Bot**: Initial implementation of automated trading functionality
 - **Community Building**: Establishing the EROS community and feedback channels
 
-### 6.1.2 Phase 2: Expansion (Q3-Q4 2024)
+### 6.1.2 Phase 2: Expansion (Q3-Q4 2025)
 
 - **EROS Intel Tracker**: Launch of the market intelligence aggregation system
 - **EROS AI Agent**: Introduction of the conversational AI trading assistant
@@ -21,7 +21,7 @@ The EROS platform is being developed according to a strategic roadmap that balan
 - **API Access**: Public API for programmatic access to platform capabilities
 - **$EROS Token Launch**: Initial token offering and ecosystem integration
 
-### 6.1.3 Phase 3: Advanced Features (Q1-Q2 2025)
+### 6.1.3 Phase 3: Advanced Features (Q1-Q2 2026)
 
 - **Cross-Chain Expansion**: Support for additional blockchains beyond Solana
 - **Advanced AI Models**: Next-generation machine learning capabilities across all tools
@@ -30,7 +30,7 @@ The EROS platform is being developed according to a strategic roadmap that balan
 - **Enhanced Governance**: Expanded DAO capabilities for platform governance
 - **Developer SDK**: Comprehensive toolkit for third-party developers
 
-### 6.1.4 Phase 4: Ecosystem Growth (Q3-Q4 2025)
+### 6.1.4 Phase 4: Ecosystem Growth (Q3-Q4 2026)
 
 - **EROS DeFi Integrations**: Deep integration with lending, staking, and yield protocols
 - **Decentralized Identity**: Advanced privacy and identity management features

@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       className="w-full py-8 mt-8 bg-card border-t border-border text-center text-text rounded-t-xl shadow-card font-body"
     >
       <div className="mb-2">
-        <span className="text-accent3 font-heading font-bold">EROS</span> &copy; 2025
+        <span className="text-accent3 font-heading font-bold">EROS</span> &copy; 2026
       </div>
       <div className="space-x-4 font-body">
         <a 
