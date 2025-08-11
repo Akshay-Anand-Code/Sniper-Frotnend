@@ -45,14 +45,7 @@ The platform is built on four key technological pillars:
 - **Data Processing Engine** — Real-time handling of multi-source market data
 - **Execution Engine** — High-performance trade execution and routing
 
-## $EROS Token
 
-The native $EROS token powers the ecosystem through:
-
-- **Platform Access** — Tiered access to premium features
-- **Governance** — Community participation in platform development
-- **Fee Discounts** — Reduced costs for platform services
-- **Staking Rewards** — Passive income for token holders
 
 ## Strategic Roadmap
 

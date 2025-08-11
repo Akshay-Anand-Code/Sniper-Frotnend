@@ -56,16 +56,7 @@ export const sidebarSections: SidebarSection[] = [
       { title: 'Sniper Bot', id: 'sniper-bot', filename: 'sniper-bot' }
     ]
   },
-  { 
-    title: '$EROS Token',
-    filename: 'token-economics',
-    subsections: [
-      { title: 'Utility & Governance', id: 'utility-governance' },
-      { title: 'Tokenomics', id: 'tokenomics' },
-      { title: 'Distribution', id: 'distribution' },
-      { title: 'Value Accrual', id: 'value-accrual' }
-    ]
-  },
+
   { 
     title: 'Strategic Roadmap',
     filename: 'roadmap',

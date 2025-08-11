@@ -19,7 +19,6 @@ The EROS platform is being developed according to a strategic roadmap that balan
 - **Enhanced Sniper Bot**: Advanced features including custom strategy development
 - **Mobile Optimization**: Improved mobile experience across all platform components
 - **API Access**: Public API for programmatic access to platform capabilities
-- **$EROS Token Launch**: Initial token offering and ecosystem integration
 
 ### 6.1.3 Phase 3: Advanced Features (Q1-Q2 2026)
 
@@ -27,7 +26,6 @@ The EROS platform is being developed according to a strategic roadmap that balan
 - **Advanced AI Models**: Next-generation machine learning capabilities across all tools
 - **Strategy Marketplace**: Platform for sharing and monetizing trading strategies
 - **Institutional Features**: Enterprise-grade tools for professional traders and funds
-- **Enhanced Governance**: Expanded DAO capabilities for platform governance
 - **Developer SDK**: Comprehensive toolkit for third-party developers
 
 ### 6.1.4 Phase 4: Ecosystem Growth (Q3-Q4 2026)
@@ -92,12 +90,7 @@ EROS is designed for long-term sustainability and growth:
 - **Enterprise Solutions**: Custom implementations for institutional clients
 - **Data and Analytics Services**: Monetization of aggregated market insights
 
-### 6.4.2 Governance and Decentralization
 
-- **Progressive Decentralization**: Gradual transition to community governance
-- **Transparent Decision Making**: Open processes for platform development decisions
-- **Stakeholder Alignment**: Balancing the needs of users, developers, and token holders
-- **Regulatory Adaptation**: Evolving to meet regulatory requirements while preserving core values
 
 ## 6.5 Milestones and Success Metrics
 
@@ -105,7 +98,7 @@ EROS will measure progress against clear metrics:
 
 - **User Adoption**: Growth in active users and trading volume
 - **Performance Metrics**: Execution speed, prediction accuracy, and user success rates
-- **Community Engagement**: Participation in governance and ecosystem development
+- **Community Engagement**: Participation in platform feedback and ecosystem development
 - **Technical Robustness**: System uptime, security record, and performance under stress
 - **Financial Sustainability**: Revenue growth and diversification of income streams
 
