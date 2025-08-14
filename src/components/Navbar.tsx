@@ -142,7 +142,7 @@ const Navbar: React.FC<NavbarProps> = ({ onWhitepaperClick }) => {
               Whitepaper
             </button>
             <a
-              href="https://x.com/ErosIntel"
+              href="https://x.com/ErosIntelSol"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-4 hover:bg-accent2/20 transition flex items-center gap-2 border-b border-border"
